@@ -9,8 +9,8 @@ A tool for crawl data from https://covid19.gov.vn/ to google sheets automaticall
 6. Tableau
 7. Crontab
 ## 2 - Pipenv Setup:
-Use `$ pip install pipenv` to install pipenv \n
-Then move to project folder `$ cd project_folder_path`
+Use `$ pip install pipenv` to install pipenv__
+Then move to project folder `$ cd project_folder_path`__
 Install all dependencies `$ pipenv install`
 
 ## 3 - Google Drive API Setup:

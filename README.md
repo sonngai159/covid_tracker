@@ -18,6 +18,9 @@ With pipfile in your project's file, install all dependencies `$ pipenv install`
 - Click on IAM & Admin, go to services account, create a new services account.
 - Go to created services account -> key -> ADD KEY -> Create new key -> Json type. NOTE: keep this json's key file to connect with google sheets.
 ### 4 - Google Sheets Setup:
+- Create new sheet, name it "csv-to-gg-sheet". 
+- Add 1 sheet name "covid_cases" to store covid case every day, 1 sheet name "covid_death" to store covid death case every day.
+
 ### 5 - Azure Virtual Machine:
 ### 6 - Tableau Setup:
 ### 7 - Crontab Setup:

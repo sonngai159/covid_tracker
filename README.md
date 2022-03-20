@@ -1,3 +1,4 @@
+![GitHub](https://img.shields.io/github/license/sonngai159/covid_crawler?style=flat-square)
 # Viet Nam - Automatic Covid Crawler
 A crawler tool to crawl data from [Covid Viet Nam](https://covid19.gov.vn/) to google sheets automatically.
 # Requires: 
@@ -27,7 +28,7 @@ With pipfile in your project's file, install all dependencies `$ pipenv install`
 - Push source code, pipfile, ***ssh_key.pem*** file, ***json's key*** file to remote machine.
 - Install pipenv.
 ### 6 - Tableau Setup:
-- Download Tableau, connect with google sheet, make your visualization.
+- Download Tableau, use google sheet as data source, make your visualization.
 - Publish Tableau visualization to the tableau public server, it automatic update when your google sheet data change.
 ### 7 - Crontab Setup:
 - Set cronjob to run source code at every time you wish.

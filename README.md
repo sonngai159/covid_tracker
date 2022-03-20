@@ -22,7 +22,7 @@ Click on left side bar buffer button again, choose API & Services, Enable Apis &
 ![](/asset/api.png)
 ###
 Search for "Google Drive API" and "Google Sheets API".
-![](/asset/gg%26sheet.png)
+![](/asset/gg&sheet.png)
 ###
 Enable both.
 ![](/asset/enable.png)

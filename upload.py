@@ -115,8 +115,9 @@ def load(df_cases,df_death):
     updated_data_death = pd.concat([existing_data_death,df_death])                      # ---> combine new data with existing data
     gd.set_with_dataframe(spreadsheet_death, updated_data_death)
 
-data = extract()
-data_cases = data[0]
-data_death = data[1]
+if __name__ == "__main__":
+    data = extract()
+    data_cases = data[0]
+    data_death = data[1]
 
-load(data_cases,data_death)
+    load(data_cases,data_death)

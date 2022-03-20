@@ -16,12 +16,18 @@ With pipfile in your project's file, install all dependencies `$ pipenv install`
 - Go to [Google Cloud Platform](https://console.cloud.google.com/home/dashboard), create new project.
 - Go to API & Services -> Enable Apis & services. Enable "Google Drive API" and "Google Sheets API".
 - Click on IAM & Admin, go to services account, create a new services account.
-- Go to created services account -> key -> ADD KEY -> Create new key -> Json type. NOTE: keep this __json's key file__ to connect with google sheets.
+- Go to created services account -> key -> ADD KEY -> Create new key -> Json type. NOTE: keep this ***json's key file*** to connect with google sheets.
 ### 4 - Google Sheets Setup:
 - Create new sheet, name it "csv-to-gg-sheet". 
 - Add 1 sheet name "covid_cases" to store covid case every day, 1 sheet name "covid_death" to store covid death case every day. *Note: when change sheets name we need to change it name in source code too.
-- Publish both sheets to web with csv type, save the __share link__ to use.
-
+- Publish both sheets to web with csv type, save the ***share link*** to use in script.
 ### 5 - Azure Virtual Machine:
+- Create new Virtual Machine, save it's ***ssh_key.pem***.
+- Connect with Virtual Machine throgh ssh protocol, install python. 
+- Push source code, pipfile, ***ssh_key.pem*** file, ***json's key*** file to remote machine.
+- Install pipenv.
 ### 6 - Tableau Setup:
+- Download Tableau, connect with google sheet, make your visualization.
+- Publish Tableau visualization to the tableau public server, it automatic update when your google sheet data change.
 ### 7 - Crontab Setup:
+- Set cronjob to run source code at every time you wish.

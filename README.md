@@ -1,4 +1,5 @@
 ![GitHub](https://img.shields.io/github/license/sonngai159/covid_crawler?style=flat-square)
+![GitHub](https://img.shields.io/github/license/sonngai159/covid_crawler?style=for-the-badge)
 # Viet Nam - Automatic Covid Crawler
 A crawler tool to crawl data from [Covid Viet Nam](https://covid19.gov.vn/) to google sheets automatically.
 # Requires: 

@@ -13,9 +13,11 @@ Use `$ pip install pipenv` to install pipenv. Then move to project folder `$ cd 
 With pipfile in your project's file, install all dependencies `$ pipenv install`.
 ## 3 - Google Drive API Setup:
 Go to [Google Cloud Platform](https://console.cloud.google.com/home/dashboard), create new project. Then click on left side bar buffer button.
-![test](/asset/choose_project.png) \
+![test](/asset/choose_project.png)
+\
 Click on IAM & Admin, go to services account, create a new account.
-![](/asset/services_account.png) \
+![](/asset/services_account.png)
+\
 Click on left side bar buffer button again, choose API & Services, Enable Apis & services.
 ![](/asset/api.png)
 

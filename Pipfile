@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+oauth2client = "*"
+gspread = "*"
+ipykernel = "*"
+pandas = "*"
+df2gspread = "*"
+selenium = "*"
+bs4 = "*"
+gspread-dataframe = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"

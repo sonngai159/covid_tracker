@@ -8,6 +8,7 @@ A tool for crawl data from [Covid Viet Nam](https://covid19.gov.vn/) to google s
 5. Azure Virtual Machine
 6. Tableau
 7. Crontab
+# Getting Started:
 ### 2 - Pipenv Setup:
 Use `$ pip install pipenv` to install pipenv. Then move to project folder `$ cd project_folder_path`. 
 With pipfile in your project's file, install all dependencies `$ pipenv install`.
@@ -20,4 +21,3 @@ With pipfile in your project's file, install all dependencies `$ pipenv install`
 ### 5 - Azure Virtual Machine:
 ### 6 - Tableau Setup:
 ### 7 - Crontab Setup:
-# Getting Started:

@@ -1,5 +1,5 @@
 # Viet Nam - Automatic Covid Crawler
-A tool for crawl data from [Covid Viet Nam](https://covid19.gov.vn/) to google sheets automatically.
+A crawler tool to crawl data from [Covid Viet Nam](https://covid19.gov.vn/) to google sheets automatically.
 # Requires: 
 1. Python - 3.9 or newer
 2. Pipenv

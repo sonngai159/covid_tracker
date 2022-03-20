@@ -14,7 +14,8 @@ With pipfile in your project's file, install all dependencies `$ pipenv install`
 ## 3 - Google Drive API Setup:
 Go to [Google Cloud Platform](https://console.cloud.google.com/home/dashboard), create new project. Then click on left side bar buffer button.
 ![test](/asset/choose_project.png)
-Then go to services account, create a new account.
+Click on IAM & Admin, go to services account, create a new account.
+![](/asset/services_account.png)
 ## 4 - Google Sheets Setup:
 ## 5 - Azure Virtual Machine:
 ## 6 - Tableau Setup:

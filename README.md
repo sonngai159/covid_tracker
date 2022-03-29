@@ -6,7 +6,7 @@
 ![GitHub watchers](https://img.shields.io/github/watchers/sonngai159/covid_crawler?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/sonngai159/covid_crawler?style=social)
 ![GitHub Repo stars](https://img.shields.io/github/stars/sonngai159/covid_crawler?style=social)
-# Viet Nam - Automatic Covid Crawler
+# Viet Nam - Covid Tracker
 A crawler tool to crawl data from [Covid Viet Nam](https://covid19.gov.vn/) to google sheets automatically.
 # Requires: 
 1. Python - 3.9 or newer

@@ -20,7 +20,7 @@ With pipfile in your project's file, install all dependencies `$ pipenv install`
 ### 4 - Google Sheets Setup:
 - Create new sheet, name it "csv-to-gg-sheet". 
 - Add 1 sheet name "covid_cases" to store covid case every day, 1 sheet name "covid_death" to store covid death case every day. *Note: when change sheets name we need to change it name in source code too.
-- Publish both sheets to web with csv type, save the > share link to use.
+- Publish both sheets to web with csv type, save the __share link__ to use.
 
 ### 5 - Azure Virtual Machine:
 ### 6 - Tableau Setup:

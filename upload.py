@@ -89,31 +89,35 @@ def load(df_cases,df_death):
 
     # ---> connect to ggsheet.
     # ---> create credentials.
-    credentials = ServiceAccountCredentials.from_json_keyfile_name('client_secret.json', scope) # "client_secret.json" --> json key file to access google api services account.
+    credentials = ServiceAccountCredentials.from_json_keyfile_name('client_secret.json', scope) # --> "JSON'S FILE KEY" to access google api services account.
     client = gspread.authorize(credentials) # ---> authorize credentials.
 
-    work_sheet_link_cases = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRKwSHvbcAazVGuKeAnIF0n85gDG3ZDnmurbDbDOq7F21ZpKHQ-fDwyaTG8xXj98HcSyyjk_U1hmjWs/pub?gid=1888332389&single=true&output=csv'
+    work_sheet_link_cases = 'https://docs.google.com/spreadsheets/d/e/********single=true&output=csv'   # ---> YOUR SHEET LINK
     # ---> link work sheet to use. This link just can use to read data, 
-    # beacause we set that ggsheet public to web with csv format to easy to read by pandas
-    work_sheet_link_death = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRKwSHvbcAazVGuKeAnIF0n85gDG3ZDnmurbDbDOq7F21ZpKHQ-fDwyaTG8xXj98HcSyyjk_U1hmjWs/pub?gid=686508364&single=true&output=csv'
+    # beacause we set that ggsheet public to web with csv format to easy to read by pandas.
+    work_sheet_link_death = 'https://docs.google.com/spreadsheets/d/e/********single=true&output=csv'   # ---> YOUR SHEET LINK
 
     # ---> append cases data
-    spreadsheet_cases = client.open('csv-to-gg-sheet').worksheet('covid_cases')   # ---> open work sheet to append(write more) data
+    your_sheet_name = 'csv-to-gg-sheet';
+    your_work_sheet_name = 'covid_cases';
+    spreadsheet_cases = client.open(your_sheet_name).worksheet(your_work_sheet_name)   # ---> open work sheet to append(write more) data
 
     existing_data_cases = pd.read_csv(work_sheet_link_cases)                            # ---> get existing data
     updated_data_cases = pd.concat([existing_data_cases,df_cases])                      # ---> combine new data with existing data
     gd.set_with_dataframe(spreadsheet_cases, updated_data_cases)
 
     # ---> append death data
-
-    spreadsheet_death = client.open('csv-to-gg-sheet').worksheet('covid_death')   # ---> open work sheet to append(write more) data
+    your_sheet_name = 'csv-to-gg-sheet';
+    your_work_sheet_name = 'covid_death';
+    spreadsheet_death = client.open(your_sheet_name).worksheet(your_work_sheet_name)   # ---> open work sheet to append(write more) data
 
     existing_data_death = pd.read_csv(work_sheet_link_death)                            # ---> get existing data
     updated_data_death = pd.concat([existing_data_death,df_death])                      # ---> combine new data with existing data
     gd.set_with_dataframe(spreadsheet_death, updated_data_death)
 
-data = extract()
-data_cases = data[0]
-data_death = data[1]
+if __name__ == "__main__":
+    data = extract()
+    data_cases = data[0]
+    data_death = data[1]
 
-load(data_cases,data_death)
+    load(data_cases,data_death)

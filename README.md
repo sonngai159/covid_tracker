@@ -10,12 +10,12 @@
 A crawler tool to crawl data from [Covid Viet Nam](https://covid19.gov.vn/) to google sheets automatically.
 # Requires: 
 1. Python - 3.9 or newer
-2. Pipenv
-3. Google Drive API
-4. Google Sheets
-5. Azure Virtual Machine
-6. Tableau
-7. Crontab
+2. [Pipenv](#2---pipenv-setup)
+3. [Google Drive API](#3---google-drive-api-setup)
+4. [Google Sheets](#4---google-sheets-setup)
+5. [Azure Virtual Machine](#5---azure-virtual-machine)
+6. [Tableau](#6---tableau-setup)
+7. [Crontab](#7---crontab-setup)
 8. Basic Linux knowledges
 # Getting Started:
 ### 2 - Pipenv Setup:
@@ -42,4 +42,6 @@ With pipfile in your project's file, install all dependencies `$ pipenv install`
 - Download Tableau, use google sheet as data source, make your visualization.
 - Publish Tableau visualization to the tableau public server, it automatic update when your google sheet data change.
 ### 7 - Crontab Setup:
-- Set cronjob to run source code at every time you wish.
+- On [Azure Virtual Machine](#5---azure-virtual-machine) run `$ crontab -e` -> set cronjob to run source code at every time you wish.
+[cron_job](https://github.com/sonngai159/covid_tracker/blob/master/asset/cronjob.png)
+

@@ -14,15 +14,12 @@ from selenium.webdriver import ChromeOptions
 
 def extract():
     """ Crawling covid data from covid19.gov.vn
-
     Agrs:
         Nothing, because with different page we got different code.
-
     Returns:
         2 dataframe: 
         + data1 - cases covid per city in current day.
         + data2 - dead cases in current day.
-    
     Raises:
         Not yet.
     """
@@ -35,7 +32,6 @@ def extract():
     driver = webdriver.Chrome(options=opts) #---> provide path location of chromedriver to excute. But to advoid unexpected error
     driver.maximize_window()
     driver.get('https://covid19.gov.vn/') #---> provide url to crawl
-    
 
     iframe = driver.find_elements(By.TAG_NAME, 'iframe')
     driver.switch_to.frame(iframe[1]) #--> data we need in iframe[1]. Need to switch into there to get data. 
@@ -64,7 +60,6 @@ def extract():
     #---> sort dataframe by cases high to low. drop=True mean we drop existing index 
     # instead of adding it as and additional column to your df
 
-
     # ------------------ GET DEATH OF DAY IN HOVER POP-UP ELEMENT ------------------ #
     driver.find_element(By.ID, "death").click() #---> click to "death" tab.
     time.sleep(2)
@@ -84,8 +79,7 @@ def extract():
 def load(df_cases,df_death):
     # ------------------ Working With GG Sheet - Append DF To GG Sheet ------------------ #
     import gspread_dataframe as gd
-    scope = ["https://spreadsheets.google.com/feeds", 'https://www.googleapis.com/auth/spreadsheets',
-            "https://www.googleapis.com/auth/drive.file", "https://www.googleapis.com/auth/drive"]      # --> google services to use ggsheet.            
+    scope = ["https://www.googleapis.com/auth/spreadsheets", "https://www.googleapis.com/auth/drive"]# --> google services to use ggsheet.            
 
     # ---> connect to ggsheet.
     # ---> create credentials.

@@ -22,7 +22,7 @@ Use `$ pip install pipenv` to install pipenv. Then move to project folder `$ cd 
 With pipfile in your project's file, install all dependencies `$ pipenv install`.
 ### 3 - Google Drive API Setup:
 - Go to [Google Cloud Platform](https://console.cloud.google.com/home/dashboard), create new project.
-![create_project](https://github.com/sonngai159/covid_tracker/asset/create_project.png)
+![create_project](https://github.com/sonngai159/covid_tracker/blob/master/asset/create_project.png)
 - Go to API & Services -> Enable Apis & services. Enable "Google Drive API" and "Google Sheets API".
 - Click on IAM & Admin, go to services account, create a new services account.
 - Go to created services account -> key -> ADD KEY -> Create new key -> Json type. NOTE: keep this ***json's key file*** to connect with google sheets.

@@ -16,25 +16,28 @@ A crawler tool to crawl data from [Covid Viet Nam](https://covid19.gov.vn/) to g
 5. Azure Virtual Machine
 6. Tableau
 7. Crontab
+8. Basic Linux knowledges
 # Getting Started:
 ### 2 - Pipenv Setup:
-Use `$ pip install pipenv` to install pipenv. Then move to project folder `$ cd project_folder_path`. 
+Use `$ pip install pipenv` to install pipenv. Then create & move to the folder you want to be project folder.
 With pipfile in your project's file, install all dependencies `$ pipenv install`.
 ### 3 - Google Drive API Setup:
 - Go to [Google Cloud Platform](https://console.cloud.google.com/home/dashboard), create new project.
 ![create_project](https://github.com/sonngai159/covid_tracker/blob/master/asset/create_project.png)
 - Go to API & Services -> Enable Apis & services. Enable "Google Drive API" and "Google Sheets API".
-- Click on IAM & Admin, go to services account, create a new services account.
-- Go to created services account -> key -> ADD KEY -> Create new key -> Json type. NOTE: keep this ***json's key file*** to connect with google sheets.
+![enable_api_services](https://github.com/sonngai159/covid_tracker/blob/master/asset/enable_services.png)
+- Click on IAM & Admin, go to services account -> create a new services account.
+- Move to key tab -> ADD KEY -> Create new key -> Json type. NOTE: keep this ***json's key file*** to connect with google sheets.
+![create_private_key](https://github.com/sonngai159/covid_tracker/blob/master/asset/create_private_key.png)
 ### 4 - Google Sheets Setup:
-- Create new sheet, name it "csv-to-gg-sheet". 
-- Add 1 sheet name "covid_cases" to store covid case every day, 1 sheet name "covid_death" to store covid death case every day. *Note: when change sheets name we need to change it name in source code too.
+- Create new sheet, name it "csv-to-gg-sheet" (change any as your wish, need to change in source code too). 
+- Add 1 work sheet name "covid_cases" to store covid case every day, 1 work sheet name "covid_death" to store covid death case every day. *Note: when change sheets name we need to change it name in source code too.
 - Publish both sheets to web with csv type, save the ***share link*** to use in script.
 ### 5 - Azure Virtual Machine:
-- Create new Virtual Machine, save it's ***ssh_key.pem***.
+- Go to [Azure](https://portal.azure.com/#home), create new Virtual Machine, save it's ***ssh_key.pem***.
 - Connect with Virtual Machine throgh ssh protocol, install python. 
 - Push source code, pipfile, ***ssh_key.pem*** file, ***json's key*** file to remote machine.
-- Install pipenv.
+- Install all dependencies by pipenv at [step 2](#2---pipenv-setup).
 ### 6 - Tableau Setup:
 - Download Tableau, use google sheet as data source, make your visualization.
 - Publish Tableau visualization to the tableau public server, it automatic update when your google sheet data change.

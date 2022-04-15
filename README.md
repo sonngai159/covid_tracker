@@ -40,7 +40,7 @@ With pipfile in your project's file, install all dependencies `$ pipenv install`
 - Install all dependencies by pipenv at [step 2](#2---pipenv-setup).
 ### 6 - Tableau Setup:
 - Download Tableau, use google sheet as data source, make your visualization.
-- Publish Tableau visualization to the tableau public server, it automatic update when your google sheet data change.
+- Publish Tableau visualization to the tableau public server, it will automatic update when your google sheet data change.
 ![tableau](https://github.com/sonngai159/covid_tracker/blob/master/asset/public_tableau.png)
 ### 7 - Crontab Setup:
 - On [Azure Virtual Machine](#5---azure-virtual-machine) run `$ crontab -e` -> set cronjob to run source code at every time you wish.
